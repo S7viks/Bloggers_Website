@@ -40,6 +40,7 @@
         padding: 5px;
     }
 }
+
 * {
     box-sizing: border-box;
 }
@@ -56,7 +57,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 2vw 2vw;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
 }
 #nav-part2{
@@ -219,7 +221,7 @@ nav{
     grid-row: span 6;
 }
 
-footer {
+footer{
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -230,3 +232,5 @@ footer {
 footer p {
     margin: 0;
 }
+
+
