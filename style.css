@@ -315,9 +315,9 @@ nav{
 
 .Writers-box {
   position: relative;
-  display: flex; /* Add flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   background-color: #DAD9D2;
   top: 70px;
   left: 175px;
@@ -331,37 +331,38 @@ nav{
   background-color: #0A293A;
   height: 500px;
   width: 1000px;
-  border-radius: 10px; /* Add rounded edges */
+  border-radius: 10px;
 }
 
 .eyeball-container {
-  display: flex; /* Align eyeballs next to each other */
+  display: flex; 
   justify-content: center;
-  margin-top: 20px; /* Space from the top */
+  margin-top: 20px; 
 }
 
 .eyeball {
-  width: 200px; /* Increased width of the eyeball */
-  height: 200px; /* Increased height of the eyeball */
+  width: 200px; 
+  height: 200px; 
   background-color: white;
   border-radius: 50%;
-  border: 5px solid black; /* Optional: increased border size */
+  border: 5px solid black;
   position: relative;
-  margin: 0 30px; /* Adjust margin for better spacing */
-  overflow: hidden; /* Contain the pupil */
+  margin: 0 30px; 
+  overflow: hidden;
 }
 
 .pupil {
-  width: 80px; /* Increased width of the pupil */
-  height: 80px; /* Increased height of the pupil */
+  width: 80px;
+  height: 80px;
   background-color: black;
   border-radius: 50%;
   position: absolute;
-  top: 50%; /* Center pupil vertically */
-  left: 50%; /* Center pupil horizontally */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s; /* Smooth pupil movement */
+  transition: transform 0.1s;
 }
+
 button.More {
   padding: 10px 20px;
   background-color: #D64025;

@@ -1,52 +1,52 @@
 @media (max-width: 1200px) {
     nav {
-        flex-direction: row; /* Stack items vertically on smaller screens */
-        height: auto; /* Allow height to adjust */
+        flex-direction: row;
+        height: auto;
     }
     #nav-part2 {
-        flex-direction: row; /* Stack navigation links vertically */
-        gap: 0; /* Remove gap */
+        flex-direction: row;
+        gap: 0;
     }
     #nav-part2 h4 {
-        width: 100%; /* Make each link full width */
-        text-align: center; /* Center text */
+        width: 100%;
+        text-align: center;
     }
 
     .Storyb {
-        grid-template-columns: repeat(6, 1fr); /* 6 columns for smaller screens */
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .grid-item {
-        height: auto; /* Allow items to adjust height */
+        height: auto;
     }
 }
 
 @media (max-width: 768px) {
     .Storyb {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for small screens */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     nav {
-        padding: 0 1vw; /* Reduce padding for very small screens */
+        padding: 0 1vw;
     }
 
     .Storyb {
-        grid-template-columns: 1fr; /* Single column layout for mobile */
+        grid-template-columns: 1fr;
     }
 
     #nav-part2 h4 {
-        padding: 5px; /* Reduce padding for links */
+        padding: 5px;
     }
 }
 * {
-    box-sizing: border-box; /* Include padding and border in width/height calculations */
+    box-sizing: border-box;
 }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #DAD9D2; /* Light gray background */
+    background-color: #DAD9D2;
 }
 nav{
     height: 8vh;
@@ -56,24 +56,24 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 2vw 2vw;
-    position: relative; /* Add position relative for z-index */
+    position: relative;
     z-index: 10;
-  }
-  #nav-part2{
+}
+#nav-part2{
     display: flex;
     align-items: center;
     gap: 1vw;
-  }
-  #nav-part2 h4{
+}
+#nav-part2 h4{
     padding: 10px 20px;
     border: 1px solid #0A293A;
-    transition: all ease 0.4s ;
+    transition: all ease 0.4s;
     border-radius: 50px;
     font-weight: 500px;
     position: relative;
     overflow: hidden;
-  }
-  #nav-part2 h4::after{
+}
+#nav-part2 h4::after{
     content: "";
     position: absolute;
     height: 100%;
@@ -82,57 +82,56 @@ nav{
     left: 0;
     bottom: -100%;
     border-radius: 50%;
-    transition: all ease 0.4s ;
-  }
-  #nav-part2 h4:hover::after{
-        bottom: 0;
-        border-radius: 0;
-  }
-  #nav-part2 h4 a{
+    transition: all ease 0.4s;
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav-part2 h4 a{
     text-decoration: none;
     color:#0A293A;
     z-index: 9;
     position: relative;
-  }
-  #nav-part2 h4:hover a{
+}
+#nav-part2 h4:hover a{
     color: #DFDDD7;
-  }
+}
 .Storyb {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12 columns grid system */
-    grid-template-rows: repeat(6, 150px); /* Grid with 6 rows of fixed height */
-    gap: 10px; /* Space between grid items */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    gap: 10px;
     padding: 20px;
 }
 
-/* Common styles for each grid item (story) */
 .grid-item {
-    background-color: #D64025; /* Primary red-orange color for the grid items */
+    background-color: #D64025;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    color: white; /* White text on red background */
+    color: white;
     transition: transform 0.3s ease-in-out;
 }
 
 .grid-item:hover {
-    transform: scale(1.05); /* Hover effect to scale the grid item */
+    transform: scale(1.05);
 }
 
 .overlay {
-    position: absolute; /* Position overlay on top of image */
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(214, 64, 37, 0.7); /* Semi-transparent background */
-    color: #DAD9D2; /* Text color */
+    background-color: rgba(214, 64, 37, 0.7);
+    color: #DAD9D2;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the text vertically */
-    align-items: center; /* Center the text horizontally */
-    opacity: 0; /* Initially hide overlay */
-    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .overlay .Title {
@@ -145,17 +144,16 @@ nav{
 }
 
 .grid-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
 }
-/* Ensures that images cover the entire grid box */
+
 .grid-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes the image cover the entire box without distortion */
+    object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
-/* Styling for the text inside each grid item */
 .grid-item .Title {
     font-size: 18px;
     font-weight: bold;
@@ -176,50 +174,49 @@ nav{
     padding: 10px;
 }
 
-/* Specific grid item sizes to match the irregular layout */
 .Story1 {
-    grid-column: span 3; /* Spans 3 columns */
-    grid-row: span 1; /* Spans 1 row */
+    grid-column: span 3;
+    grid-row: span 1;
 }
 
 .Story2 {
-    grid-column: span 4; /* Spans 4 columns */
-    grid-row: span 2; /* Spans 2 rows */
+    grid-column: span 4;
+    grid-row: span 2;
 }
 
 .Story3 {
-    grid-column: span 5; /* Spans 5 columns */
-    grid-row: span 4; /* Spans 4 rows */
+    grid-column: span 5;
+    grid-row: span 4;
 }
 
 .Story4 {
-    grid-column: span 3; /* Spans 3 columns */
-    grid-row: span 3; /* Spans 2 rows */
+    grid-column: span 3;
+    grid-row: span 3;
 }
 
 .Story5 {
-    grid-column: span 4; /* Spans 4 columns */
-    grid-row: span 2; /* Spans 2 rows */
+    grid-column: span 4;
+    grid-row: span 2;
 }
 
 .Story6 {
-    grid-column: span 4; /* Adjusted to fit between existing boxes */
-    grid-row: span 6; /* Spans 6 rows */
+    grid-column: span 4;
+    grid-row: span 6;
 }
 
 .Story7 {
-    grid-column: span 5; /* Spans 3 columns */
-    grid-row: span 6; /* Spans 2 rows */
+    grid-column: span 5;
+    grid-row: span 6;
 }
 
 .Story8 {
-    grid-column: span 3; /* Spans 3 columns */
-    grid-row: span 6; /* Spans 6 rows */
+    grid-column: span 3;
+    grid-row: span 6;
 }
 
 .Story9 {
-    grid-column: span 3; /* Spans 3 columns */
-    grid-row: span 6; /* Spans 6 rows */
+    grid-column: span 3;
+    grid-row: span 6;
 }
 
 footer {
